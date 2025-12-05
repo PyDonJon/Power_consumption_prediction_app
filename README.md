@@ -39,7 +39,9 @@ Hour – captures daily consumption cycles
 
 Data is loaded, cleaned, and transformed into model-ready features during the training stage.
 
+
 Model Description
+
 Algorithm
 
 The project uses XGBoost Regressor, a gradient-boosted decision-tree model well suited for forecasting tasks involving structured time-based features.
@@ -49,6 +51,7 @@ Training Setup
 Train/test split: last portion of dataset held out for evaluation
 
 Model saved as: xgb_model.pkl
+
 
 Evaluation Metrics
 
@@ -61,31 +64,13 @@ RMSE (Root Mean Squared Error)
 MSE (Mean Squared Error)
 
 R2:   0.84
+
 RMSE: 1218.10
+
 MSE: 1483770.51 
 
-Project Structure
-FASTAPI_POWER_CONSUMPTION/
-├── app/
-│   ├── get_consumption_volume_endpoint/
-│   │   ├── __init__.py
-│   │   ├── get_consumption_volume.py      # API route logic
-│   │   ├── schemas.py                     # Request/response models
-│   │
-│   ├── models/
-│   │   └── xgb_model.pkl                  # Trained XGBoost model
-│   │
-│   ├── startup/
-│   │   ├── __init__.py
-│   │   ├── load_models.py                 # Loads model on app startup
-│   │
-│   └── main.py                            # FastAPI application entrypoint
-│
-├── Notebooks/
-│   └── 01-consumption-prediction-notebook.ipynb   # Training + exploration
-│
-└── run_application.py                      # Script to launch API locally
-└── README.md
+
+
 
 Future Enhancements
 
